@@ -37,3 +37,8 @@ Creational Patterns:
     but you don’t want it to depend on the concrete classes of those products—they might 
     be unknown beforehand or you simply want to allow for future extensibility.
 
+3. Builder: https://refactoring.guru/design-patterns/builder
+            https://javadevcentral.com/builder-design-pattern
+   Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+   The Builder pattern is used when the desired product is complex and requires multiple steps to complete. In this case, several construction methods would be simpler than a single monstrous constructor. The Builder pattern keeps the product private until it’s fully built.
+
