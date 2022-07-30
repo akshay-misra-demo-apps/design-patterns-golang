@@ -8,6 +8,7 @@ import (
 	"dp.com/design-patterns/creational/builder"
 	"dp.com/design-patterns/creational/builder/directors"
 	"dp.com/design-patterns/creational/factorymethod"
+	"dp.com/design-patterns/creational/prototype"
 )
 
 func main() {
@@ -91,5 +92,33 @@ func main() {
 	fmt.Println("TwoBedroomHouseBuildDirector, house: ", house)
 
 	fmt.Println("builder factory ends...")
+	fmt.Println("")
+	fmt.Println("")
 
+	fmt.Println("prototype start...")
+
+	file1 := &prototype.File{Name: "File 1"}
+	file2 := &prototype.File{Name: "File 2"}
+	file3 := &prototype.File{Name: "File 3"}
+
+	folder1 := &prototype.Folder{Name: "Folder1"}
+	folder1.Children = append(folder1.Children, file1, file2, file3)
+
+	folder1.Print("  ")
+
+	folder2 := &prototype.Folder{Name: "Folder2"}
+
+	file4 := &prototype.File{Name: "File 4"}
+	folder2.Children = append(folder2.Children, folder1, file4)
+
+	folder2.Print("  ")
+	fmt.Println("")
+	fmt.Println("")
+
+	folder1Clone := folder1.Clone()
+	folder1Clone.Print("  ")
+	folder2Clone := folder2.Clone()
+	folder2Clone.Print("  ")
+
+	fmt.Println("prototype ends...")
 }

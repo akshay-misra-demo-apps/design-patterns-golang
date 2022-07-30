@@ -28,17 +28,25 @@ The Catalog of Design Patterns:
 Creational Patterns: 
 
 1. Factory Method: https://refactoring.guru/design-patterns/factory-method
+
    Use the Factory Method when you don’t know beforehand the exact types and dependencies of the objects your code should work with.
    Use the Factory Method when you want to provide users of your library or framework with a way to extend its internal components.
    Use the Factory Method when you want to save system resources by reusing existing objects instead of rebuilding them each time.
 
 2. Abstract Factory: https://refactoring.guru/design-patterns/abstract-factory
+
     Use the Abstract Factory when your code needs to work with various families of related products, 
     but you don’t want it to depend on the concrete classes of those products—they might 
     be unknown beforehand or you simply want to allow for future extensibility.
 
 3. Builder: https://refactoring.guru/design-patterns/builder
             https://javadevcentral.com/builder-design-pattern
+         
    Separate the construction of a complex object from its representation so that the same construction process can create different representations.
    The Builder pattern is used when the desired product is complex and requires multiple steps to complete. In this case, several construction methods would be simpler than a single monstrous constructor. The Builder pattern keeps the product private until it’s fully built.
+
+4. Prototype: https://refactoring.guru/design-patterns/prototype
+  
+   Prototype is a creational design pattern that allows cloning objects, even complex ones, without coupling to the client code.
+   Clone func within a struct is an example of prototype design pattern.
 
